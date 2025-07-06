@@ -31,6 +31,12 @@ namespace ZombieOutbreak
         bool zombiesFrozen = false;
 
         private System.Windows.Forms.Timer powerUpDropTimer = new System.Windows.Forms.Timer();
+        
+        private System.Windows.Forms.Timer startCountdownTimer = new System.Windows.Forms.Timer();
+        private int countdownValue = 3;
+        private Label countdownLabel = new Label();
+        private bool gameStarted = false;
+
         public Form3(string language)
         {
             InitializeComponent();
@@ -55,6 +61,8 @@ namespace ZombieOutbreak
 
             powerUpDropTimer.Interval = 15000;
             powerUpDropTimer.Tick += PowerUpDropTimer_Tick;
+
+             countdownLabel.BringToFront();
         }
         private void PowerUpDropTimer_Tick(object sender, EventArgs e)
         {
@@ -76,6 +84,44 @@ namespace ZombieOutbreak
                 return cp;
             }
         }
+
+        private void StartCountdown()
+        {
+            countdownValue = 3;
+
+            countdownLabel.Font = new Font("Century Gothic", 300, FontStyle.Bold);
+            countdownLabel.ForeColor = Color.Red;
+            countdownLabel.BackColor = Color.Transparent;
+            countdownLabel.AutoSize = true;
+            countdownLabel.Text = countdownValue.ToString();
+            countdownLabel.Location = new Point((this.ClientSize.Width / 2) + 200, (this.ClientSize.Height / 2));
+            countdownLabel.BringToFront();
+
+            if (!this.Controls.Contains(countdownLabel))
+                this.Controls.Add(countdownLabel);
+
+            startCountdownTimer.Interval = 1000;
+            startCountdownTimer.Tick -= StartCountdownTimer_Tick; // avoid duplicates
+            startCountdownTimer.Tick += StartCountdownTimer_Tick;
+            startCountdownTimer.Start();
+        }
+
+        private void StartCountdownTimer_Tick(object sender, EventArgs e)
+        {
+            countdownValue--;
+            if (countdownValue > 0)
+            {
+                countdownLabel.Text = countdownValue.ToString();
+            }
+            else
+            {
+                startCountdownTimer.Stop();
+                this.Controls.Remove(countdownLabel);
+                gameStarted = true;
+                GameTimer.Start();
+            }
+        }
+
 
         private int GetZombieImageIndexByDirection(string direction)
         {
@@ -323,7 +369,7 @@ namespace ZombieOutbreak
 
         private void MoveZombieTowardsPlayer(PictureBox zombie)
         {
-            if (zombiesFrozen) return;
+            if (!gameStarted || zombiesFrozen) return;
 
             string[] tagParts = zombie.Tag.ToString().Split(':');
             if (tagParts.Length != 2) return;
@@ -391,7 +437,7 @@ namespace ZombieOutbreak
 
         private void Form3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (gameOver) return;
+            if (!gameStarted || gameOver) return;
 
             switch (e.KeyCode)
             {
@@ -560,6 +606,8 @@ namespace ZombieOutbreak
                 txtKills.Text = "Kills: " + score;
                 txtHealth.Text = "Health:";
             }
+
+            StartCountdown();
         }
     }
 }
