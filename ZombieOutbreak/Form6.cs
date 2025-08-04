@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +26,7 @@ namespace ZombieOutbreak
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-           
+
             if (language == "mk")
             {
                 this.Text = "Играта заврши";
@@ -34,7 +34,7 @@ namespace ZombieOutbreak
                 button1.Text = "Обиди се повторно";
                 button2.Text = "Избери друго оружје";
                 button3.Text = "Излез";
-            } 
+            }
             else
             {
                 button1.Text = "Retry";
@@ -54,9 +54,23 @@ namespace ZombieOutbreak
             btn.ForeColor = Color.White;
             btn.FlatStyle = FlatStyle.Flat;
             btn.FlatAppearance.BorderSize = 0;
-            btn.BackColor = Color.FromArgb(160, 30, 30, 30); 
+            btn.BackColor = Color.FromArgb(160, 30, 30, 30);
         }
 
+        private void PositionButtons()
+        {
+            int buttonWidth = 700;
+            int buttonHeight = 100;
+            int spacing = 25;
+
+            int centerX = (this.ClientSize.Width - buttonWidth) / 2;
+            int startY = this.ClientSize.Height / 2 - (buttonHeight * 3 + spacing * 2) / 2;
+
+            StyleButton(button2, new Point(centerX, startY + 350 + buttonHeight + spacing));
+            StyleButton(button1, new Point(centerX, startY +250+ buttonHeight + spacing));
+            StyleButton(button3, new Point(centerX, startY + 450 + buttonHeight + spacing));
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -93,6 +107,11 @@ namespace ZombieOutbreak
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            PositionButtons();
         }
     }
 }
