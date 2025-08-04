@@ -184,45 +184,45 @@ namespace ZombieOutbreak
         }
 
         private void CustomizeHUD()
-        {
-            StyleLabel(txtAmmo);
-            StyleLabel(txtKills);
-            StyleLabel(txtHealth);
-            StyleLabel(txtLevel);
+ {
+     StyleLabel(txtAmmo);
+     StyleLabel(txtKills);
+     StyleLabel(txtHealth);
+     StyleLabel(txtLevel);
 
-            if (currentLanguage == "mk")
-            {
-                txtAmmo.Text = "Муниција: " + ammo;
-                txtKills.Text = "Убиени: " + score;
-                txtHealth.Text = "Живот:";
-                txtLevel.Text = "Ниво: " + level;
-            }
-            else
-            {
-                txtAmmo.Text = "Ammo: " + ammo;
-                txtKills.Text = "Kills: " + score;
-                txtHealth.Text = "Health:";
-                txtLevel.Text = "Level: " + level;
-            }
+     if (currentLanguage == "mk")
+     {
+         txtAmmo.Text = "Муниција: " + ammo;
+         txtKills.Text = "Убиени: " + score;
+         txtHealth.Text = "Живот:";
+         txtLevel.Text = "Ниво: " + level;
+     }
+     else
+     {
+         txtAmmo.Text = "Ammo: " + ammo;
+         txtKills.Text = "Kills: " + score;
+         txtHealth.Text = "Health:";
+         txtLevel.Text = "Level: " + level;
+     }
 
-            healthBar.ForeColor = Color.Green;
-            healthBar.BackColor = Color.LightGray;
-            healthBar.Width = 370;
-            healthBar.Height = 50;
-            healthBar.Location = new Point(2100, 60);
-        }
+     healthBar.ForeColor = Color.Green;
+     healthBar.BackColor = Color.LightGray;
+     healthBar.Width = 370;
+     healthBar.Height = 50;
+     healthBar.Location = new Point(1200, 50);
+ }
 
-        private void StyleLabel(Label label)
-        {
-            label.BackColor = Color.Transparent;
-            label.ForeColor = Color.DarkRed;
-            label.Font = new Font("Century Gothic", 22, FontStyle.Bold);
-            label.AutoSize = true;
-            txtAmmo.Location = new Point(750, 50);
-            txtKills.Location = new Point(1350, 50);
-            txtHealth.Location = new Point(1850, 50);
-            txtLevel.Location = new Point(250, 50);
-        }
+ private void StyleLabel(Label label)
+ {
+     label.BackColor = Color.Transparent;
+     label.ForeColor = Color.DarkRed;
+     label.Font = new Font("Century Gothic", 22, FontStyle.Bold);
+     label.AutoSize = true;
+     txtAmmo.Location = new Point(550, 50);
+     txtKills.Location = new Point(850, 50);
+     txtHealth.Location = new Point(1050, 50);
+     txtLevel.Location = new Point(350, 50);
+ }
         private void Form4_Load(object sender, EventArgs e)
         {
             SetRandomBackgroundImage();
