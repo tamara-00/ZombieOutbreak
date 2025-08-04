@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,7 +97,7 @@ namespace ZombieOutbreak
 
         private void ApplyButtonStylesAndText()
         {
-            button1.Location = new Point(880, 1490);
+            //button1.Location = new Point(880, 1490);
             button1.Size = new Size(170, 60);
             button1.BackColor = Color.FromArgb(180, 0, 0);
             button1.ForeColor = Color.White;
@@ -107,7 +107,7 @@ namespace ZombieOutbreak
             button1.TextAlign = ContentAlignment.MiddleCenter;
             button1.Text = "Select";
 
-            button2.Location = new Point(1325, 1490);
+            //button2.Location = new Point(1325, 1490);
             button2.Size = new Size(170, 60);
             button2.BackColor = Color.FromArgb(180, 0, 0);
             button2.ForeColor = Color.White;
@@ -116,7 +116,7 @@ namespace ZombieOutbreak
             button2.Font = new Font("Century Gothic", 14, FontStyle.Bold);
             button2.TextAlign = ContentAlignment.MiddleCenter;
 
-            button3.Location = new Point(1770, 1490);
+            //button3.Location = new Point(1770, 1490);
             button3.Size = new Size(170, 60);
             button3.BackColor = Color.FromArgb(180, 0, 0);
             button3.ForeColor = Color.White;
@@ -139,9 +139,28 @@ namespace ZombieOutbreak
             }
         }
 
+        private void ResizeUI()
+        {
+            int buttonWidth = 170;
+            int buttonHeight = 60;
+            int spacing = 80; 
+
+            int totalWidth = buttonWidth * 3 + spacing * 2;
+            int startX = (ClientSize.Width - totalWidth) / 2;
+            int yPos = ClientSize.Height - buttonHeight - 60; 
+
+            button1.Size = new Size(buttonWidth, buttonHeight);
+            button2.Size = new Size(buttonWidth, buttonHeight);
+            button3.Size = new Size(buttonWidth, buttonHeight);
+
+            button1.Location = new Point(startX, yPos);
+            button2.Location = new Point(startX + buttonWidth + spacing, yPos);
+            button3.Location = new Point(startX + 2 * (buttonWidth + spacing), yPos);
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            ResizeUI();   
         }
     }
 }
