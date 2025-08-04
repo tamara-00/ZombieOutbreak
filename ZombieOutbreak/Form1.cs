@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
@@ -34,7 +34,8 @@ namespace ZombieOutbreak
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            button1.Location = new Point(300, 500);
+            button1.Location = new Point(ClientSize.Width / 2 / 2 - 430, ClientSize.Height / 2 / 2 + 50);
+            //llll
             button1.Size = new Size(480, 110);
             button1.BackColor = Color.FromArgb(255, 100, 0);
             button1.ForeColor = Color.White;
@@ -44,7 +45,7 @@ namespace ZombieOutbreak
             button1.TextAlign = ContentAlignment.MiddleCenter;
             button1.Text = "Play";
 
-            button2.Location = new Point(300, 640);
+            button2.Location = new Point(ClientSize.Width / 2 / 2 - 430, ClientSize.Height / 2 / 2 + 150);
             button2.Size = new Size(480, 110);
             button2.BackColor = Color.FromArgb(180, 0, 0);
             button2.ForeColor = Color.White;
@@ -54,14 +55,14 @@ namespace ZombieOutbreak
             button2.TextAlign = ContentAlignment.MiddleCenter;
             button2.Text = "Exit";
 
-            label1.Location = new Point(280, 950);
+            label1.Location = new Point(ClientSize.Width / 2 / 2 - 430, ClientSize.Height / 2 / 2 + 350);
             label1.Size = new Size(480, 110);
             label1.Font = new Font("Century Gothic", 24, FontStyle.Regular);
             label1.Text = "Language:";
             label1.BackColor = Color.Black;
             label1.ForeColor = Color.White;
 
-            comboBox1.Location = new Point(292, 1060);
+            comboBox1.Location = new Point(ClientSize.Width / 2 / 2 - 430, ClientSize.Height / 2 / 2 + 500);
             comboBox1.Size = new Size(480, 110);
             comboBox1.Font = new Font("Century Gothic", 20, FontStyle.Regular);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -79,7 +80,7 @@ namespace ZombieOutbreak
             }
             comboBox1.SelectedIndexChanged += LanguageBox_SelectedIndexChanged;
 
-            label2.Location = new Point(280, 1230);
+            label2.Location = new Point(ClientSize.Width / 2 / 2 - 430, ClientSize.Height / 2 / 2 + 750);
             label2.Size = new Size(480, 110);
             label2.Font = new Font("Century Gothic", 24, FontStyle.Regular);
             label2.Text = "Music: On";
@@ -141,7 +142,29 @@ namespace ZombieOutbreak
             instructionsPanel.Controls.Add(instructionsLabel);
 
             this.Controls.Add(instructionsPanel);
+
+            ResizeUI();
         }
+
+        private void ResizeUI()
+        {
+            int leftMargin = 100; 
+            int startY = 200;     
+            int spacing = 130;     
+
+            button1.Location = new Point(leftMargin, startY);
+            button2.Location = new Point(leftMargin, startY + spacing);
+            label1.Location = new Point(leftMargin - 10, startY + spacing * 2 + 60);
+            comboBox1.Location = new Point(leftMargin, startY + spacing * 3);
+            label2.Location = new Point(leftMargin, startY + spacing * 4);
+            pictureBox1.Location = new Point(leftMargin + label2.Width + 10, startY + spacing * 4 - 35);
+            button3.Location = new Point(leftMargin, startY + spacing * 5);
+            instructionsPanel.Location = new Point(leftMargin + 600, startY + spacing * 2); 
+        }
+
+
+
+
 
         private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
