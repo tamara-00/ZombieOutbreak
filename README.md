@@ -2,9 +2,9 @@
 
 ## Windows Forms Project by: Tamara Stojanoska (231030), Davor Lazarov (233109) and Ognen Mladenovski (233108)
 
-### Tutorial: https://www.youtube.com/watch?v=z2h_4_f6fD8
+### Tutorial: https://www.youtube.com/watch?v=z2h_4_f6fD8 <br>
 
-**Македонски**
+# **Македонски**
 
 ## 1. Опис на апликацијата
 Проектната задача претставува имплементација на игра со зомби, изработена со помош на **C#** и **Windows Forms**. Главната цел на играчот е да преживее колку што е можно подолго, избегнувајќи зомби суштества кои се појавуваат на екранот и се движат кон него. 
@@ -161,7 +161,7 @@ private void MakeZombies()
 <br>
 
 
-**English**
+# **English**
 
 ## 1.Problem Description (Application/Game)
 The project task is the implementation of a zombie-themed game, developed using **C#** and **Windows Forms**. The main goal of the player is to survive as long as possible, avoiding zombie creatures that appear on the screen and move toward them.
