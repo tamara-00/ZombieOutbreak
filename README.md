@@ -12,3 +12,6 @@
 **Начин на играње**:
 1. Играта започнува со fullscreen режим.
 2. Првиот екран содржи копчиња: **играј**, **излез**, **начин на играње**. Има можност за избор на **јазик** (Македонски/Англиски) и музика додека не започне играта (песна: The Walking Dead Season 3 Comic Con Trailer Song Black - Kari Kimmel).
+<img width="1430" height="894" alt="pic1" src="https://github.com/user-attachments/assets/dffe95f7-5692-450d-9756-747a74a9d36e" />
+<br>
+<img width="1430" height="894" alt="pic2" src="https://github.com/user-attachments/assets/aa2ba6cb-58c3-4ab8-bd4d-2cf9b127182c" />
