@@ -169,8 +169,8 @@ The project task is the implementation of a zombie-themed game, developed using 
 #### 1. The game starts in fullscreen mode.
 
 #### 2. The first screen contains buttons: Play, Exit, and How to Play. There is a language option (Macedonian ор English) and background music before the game begins (Song: The Walking Dead Season 3 Comic Con Trailer Song - Black by Kari Kimmel).
-<img width="1430" height="894" alt="pic1" src="https://github.com/user-attachments/assets/dffe95f7-5692-450d-9756-747a74a9d36e" /><br>
-<img width="1430" height="894" alt="pic2" src="https://github.com/user-attachments/assets/aa2ba6cb-58c3-4ab8-bd4d-2cf9b127182c" />
+<img width="1430" height="894" alt="pic1" src="engl1.png" /><br>
+<img width="1430" height="894" alt="pic2" src="engl2.png" />
 
 #### 3.	The game starts by clicking the “Play” button.
 
