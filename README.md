@@ -25,15 +25,15 @@
 <img width="1430" height="894" alt="pic3" src="https://github.com/user-attachments/assets/336270a6-0190-424a-9285-da86ee3fbd9a" />
 
 #### 5.	По одлуката за оружје, со клик на копчето Избери започнува играта со соодветно избраното оружје.
-<img width="1430" height="894" alt="pic4" src="https://github.com/user-attachments/assets/da38276f-216d-48f7-8711-8de453a16f74" /> <br>
-<img width="1430" height="894" alt="pic5" src="https://github.com/user-attachments/assets/bce02419-2a3a-4c2c-8338-3b20da11c659" /> <br>
-<img width="1430" height="894" alt="pic6" src="https://github.com/user-attachments/assets/3b575301-ce02-4d76-bdbc-adc306da544d" /> <br>
+<img width="1430" height="894" alt="pic4" src="https://github.com/user-attachments/assets/da38276f-216d-48f7-8711-8de453a16f74" /><br>
+<img width="1430" height="894" alt="pic5" src="https://github.com/user-attachments/assets/bce02419-2a3a-4c2c-8338-3b20da11c659" /><br>
+<img width="1430" height="894" alt="pic6" src="https://github.com/user-attachments/assets/3b575301-ce02-4d76-bdbc-adc306da544d" /><br>
 
 ##### 6.	Се користат тастерите ← ↑ ↓ → за движење.
 ##### 7.	Со клик на копчето SPACE се пука.
 ##### 8.	При убиени 10 зомбиња пoминувате кон повисоко ниво и со тоа играта се отежнува (доаѓаат поголем број зомбиња и истите се движат побрзо).
 ##### 9.	На секои 20тина секунди се појавуваат предмети за засилување/бонуси:
--	**Златна**, **сребрена** и **бронзена кутија** - Бонус за 10, 5 и 3 куршуми.
+-	**Златна**, **сребрена** и **бронзена кутија** - Бонус за **10**, **5** и **3** куршуми.
 -	**Зелена кутија** - Бонус со кој се **продолжува животот**.
 -	**Плава кутија** - Бонус со кој **зомбињата прекинуваат со движење на одредено време** притоа играчот за тоа време може да ги пука.
 Доколку не се соберат за одредено време бонусите исчезнуваат од екранот.
