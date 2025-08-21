@@ -178,11 +178,11 @@ The project task is the implementation of a zombie-themed game, developed using 
 -	**Single Action Rifle**: which fires 1 bullet with a long range.
 -	**Shotgun:**: which fires 5 pellets at different angles and directions, with shorter range.
 -	**UZI SMG**: which fires multiple bullets in the same direction, with the same angle and short range.
-<img width="1430" height="894" alt="pic3" src="https://github.com/user-attachments/assets/336270a6-0190-424a-9285-da86ee3fbd9a" />
+<img width="1430" height="894" alt="pic3" src="weaponselection.png" />
 
 #### 5.	After selecting a weapon and clicking the Select button, the game begins (a new screen appears).
-<img width="1430" height="894" alt="pic4" src="https://github.com/user-attachments/assets/da38276f-216d-48f7-8711-8de453a16f74" /><br>
-<img width="1430" height="894" alt="pic5" src="https://github.com/user-attachments/assets/bce02419-2a3a-4c2c-8338-3b20da11c659" /><br>
+<img width="1430" height="894" alt="pic4" src="gun1.png" /><br>
+<img width="1430" height="894" alt="pic5" src="gun2.png" /><br>
 <img width="1430" height="894" alt="pic6" src="https://github.com/user-attachments/assets/23bd1098-b6eb-4344-93f3-49b33722f33c" /><br>
 
 #### 6.	Movement is controlled using the ← ↑ ↓ → arrow keys.
@@ -203,7 +203,7 @@ If not collected in time, the power-ups disappear from the screen.
 
 #### 12.	A Game Over screen appears with options: restart, choose a new weapon, or quit.
 
-<img width="1430" height="894" alt="pic7" src="https://github.com/user-attachments/assets/26044f8c-aaa3-488d-8bcc-3bd2daeca9b9" /><br>
+<img width="1430" height="894" alt="pic7" src="gameover.png" /><br>
 
 **Inspirational Note**: The game is inspired by classic zombie games such as "World War Z" and "Left 4 Dead", but implemented with a simple 2D interface.
 
@@ -211,7 +211,7 @@ If not collected in time, the power-ups disappear from the screen.
 The implementation uses **object-oriented programming principles**. The goal is to dynamically display different scenes and features across **six separate forms**, where each form represents a specific game state.
 
 <p align="center">
-  <img width="400" height="360" alt="pic8" src="https://github.com/user-attachments/assets/be73b132-2a08-4814-ab44-212642cae3f0" />
+  <img width="400" height="360" alt="pic8" src="description.png" />
 </p>
 
 ## Additional Classes in the Game:
