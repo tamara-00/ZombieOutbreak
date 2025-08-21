@@ -27,7 +27,7 @@
 #### 5.	По одлуката за оружје, со клик на копчето Избери започнува играта со соодветно избраното оружје.
 <img width="1430" height="894" alt="pic4" src="https://github.com/user-attachments/assets/da38276f-216d-48f7-8711-8de453a16f74" /><br>
 <img width="1430" height="894" alt="pic5" src="https://github.com/user-attachments/assets/bce02419-2a3a-4c2c-8338-3b20da11c659" /><br>
-<img width="1430" height="894" alt="pic6" src="https://github.com/user-attachments/assets/19917f3a-ba42-458c-9c1b-5fa6413d69c2" /><br>
+<img width="1430" height="894" alt="pic6" src="uzimkd.png" /><br>
 
 #### 6.	Се користат тастерите ← ↑ ↓ → за движење.
 
