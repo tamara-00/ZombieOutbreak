@@ -69,3 +69,69 @@
 - **Слики**: се чуваат во посебни фолдери и се вчитуваат динамички (на пр. Resources/zombies/, Resources/backgrounds/).
 - **Звуци**: .wav фајлови за музика.
 - **Јазици**: текстови и инструкции организирани преку услови според Language.
+
+## Опис на функција/класа 
+**Метод за создавање зомби – MakeZombies()**, одговорен за создавање на поединечни зомби-елементи во форма на PictureBox контроли кои се поставуваат на случајни локации на формата, без да се преклопуваат со играчот или други зомби. Овие зомби се визуелно прикажани преку слики и се додаваат во листата zombiesList, како и на самата форма.
+```C#
+private void MakeZombies()
+{
+    string[] types = { "z", "m", "b", "ar" };
+    string type = types[randNum.Next(types.Length)];
+    int frame = randNum.Next(4);
+    Image zombieImage = zombieImages[type][frame];
+
+    int attempts = 0;
+    const int maxAttempts = 100;
+
+    while (attempts < maxAttempts)
+    {
+        attempts++;
+
+        int x = randNum.Next(0, this.ClientSize.Width - 170);
+        int y = randNum.Next(50, this.ClientSize.Height - 170);
+
+        Rectangle newZombieRect = new Rectangle(new Point(x, y), new Size(170, 170));
+
+        bool intersects = false;
+
+        if (newZombieRect.IntersectsWith(player.Bounds))
+        {
+            intersects = true;
+        }
+
+        if (!intersects)
+        {
+            foreach (PictureBox existingZombie in zombiesList)
+            {
+                if (newZombieRect.IntersectsWith(new Rectangle(existingZombie.Location, existingZombie.Size)))
+                {
+                    intersects = true;
+                    break;
+                }
+            }
+        }
+
+        if (!intersects)
+        {
+            PictureBox zombie = new PictureBox
+            {
+                Tag = $"zombie:{type}",
+                Image = zombieImage,
+                Left = x,
+                Top = y,
+                Size = new Size(170, 170),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                BackColor = Color.Transparent,
+                Parent = this
+            };
+
+            zombiesList.Add(zombie);
+            this.Controls.Add(zombie);
+            zombie.BringToFront();
+            player.BringToFront();
+            return;
+        }
+    }
+}
+
+```
